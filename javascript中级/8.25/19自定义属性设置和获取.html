@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+    <style>
+        ul {
+            list-style: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<ul id="uu">
+    <li>助教的数学成绩</li>
+    <li>班主任的成绩</li>
+    <li>小苏的成绩</li>
+    <li>小杰老师成绩</li>
+    <li>乔峰成绩</li>
+</ul>
+<script>
+    //获取所有的li标签,然后为每个标签中动态的添加自定义属性和值
+    //点击的时候获取该标签的自定义属性的值
+
+    //根据id获取ul标签,并且或者该标签中所有的li
+    var list=my$("uu").getElementsByTagName("li");
+    //循环遍历
+    for (var i=0;i<list.length;i++){
+        //先为每个li添加自定义属性
+        list[i].setAttribute("score",(i+1)*10);
+        //点击每个li标签，显示对应的自定义属性值
+        list[i].onclick=function () {
+          alert(this.getAttribute("score"));
+        };
+    }
+</script>
+</body>
+</html>

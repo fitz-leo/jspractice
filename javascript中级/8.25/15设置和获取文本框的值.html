@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+</head>
+<body>
+<input type="text" value="文本框" id="txt">
+<script>
+
+</script><input type="button" value="按钮" id="btn"/>
+<p>这是p</p>
+
+<script>
+
+    my$("btn").onclick=function () {
+        console.log(document.getElementsByTagName("p")[0].innerText);
+    };
+
+
+    //  my$("txt").onblur=function () {
+    //    this.value="哈哈";
+    //    console.log(this.id);
+    //  };
+    </script>
+</body>
+</html>

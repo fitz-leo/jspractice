@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+    <style>
+        .cls {
+            width: 300px;
+            height: 200px;
+            background-color: yellow;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="设置样式" id="btn">
+<div id="dv"></div>
+<script>
+    my$("btn").onclick=function () {
+        // my$("dv").style.width="300px";
+        // my$("dv").style.weight="300px";
+        // my$("dv").style.backgroundColor="pink";
+        // my$("dv").style.border="10px solid red";
+        // my$("dv").style.width="300px";
+        my$("dv").className="cls";
+    };
+</script>
+</body>
+</html>

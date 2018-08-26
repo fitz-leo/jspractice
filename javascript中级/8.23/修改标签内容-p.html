@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="修改p标签内容" id="btn"/>
+<p id="p1"></p>
+<script>
+    //根据id获取按钮；
+    var btnObj=document.getElementById("btn");
+    //为按钮注册点击事件，添加事件处理函数
+    btnObj.onclick=function () {
+        document.getElementById("p1").innerText="我就是p1标签";
+
+    };
+
+</script>
+</body>
+</html>

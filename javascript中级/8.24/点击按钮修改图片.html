@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="max" id="btn">
+<img src="../images/2-small.jpg" alt="" id="im">
+<script>
+    // document.getElementById("btn").onclick=function () {
+    //     document.getElementsByTagName("img")[0].src="../images/2.jpg";
+    // };
+    //优化方法
+    function my$(id) {
+        return document.getElementById(id);
+    }
+
+
+    my$("btn").onclick=function () {
+        my$("im").src="../images/2.jpg";
+    };
+</script>
+</body>
+</html>

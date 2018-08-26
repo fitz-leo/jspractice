@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+    <style>
+        .cls{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<p>1</p>
+<p class="cls">2</p>
+<span class="cls">1</span><br>
+<span>2</span><br>
+<div class="cls">1</div>
+<div>2</div>
+<input type="button" value="显示效果" id="btn"><br>
+<script>
+    //点击按钮弹出对话框
+    //根据选择器的方式获取元素
+    my$("btn").onclick=function () {
+        var objs=document.getElementsByClassName("cls");
+        for (var i=0;i<objs.length;i++){
+            objs[i].style.backgroundColor="pink";
+        }
+    };
+</script>
+</body>
+</html>

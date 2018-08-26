@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="修改文本框的值" id="btn"/><br />
+<input type="text" value=""><br/>
+<input type="text" value=""><br/>
+<input type="text" value=""><br/>
+<input type="text" value=""><br/>
+<input type="text" value=""><br/>
+<input type="text" value=""><br/>
+<input type="text" value=""><br/>
+<input type="text" value=""><br/>
+<input type="text" value=""><br/>
+<script>
+    document.getElementById("btn").onclick = function () {
+        var iObj = document.getElementsByTagName("input");
+        for (var i = 1; i < iObj.length; i++) {
+            if (iObj.type !== "button") {
+                iObj[i].value = "哈哈哈";
+            }
+        }
+    };
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="没怀孕" />
+<input type="button" value="没怀孕" />
+<input type="button" value="没怀孕" />
+<input type="button" value="没怀孕" />
+<input type="button" value="没怀孕" />
+<input type="button" value="没怀孕" />
+<script>
+    var btnObjs=document.getElementsByTagName("input");
+    for (var i=0;i<btnObjs.length;i++){
+        btnObjs[i].onclick=function () {
+            for (var j=0;j<btnObjs.length;j++){
+                btnObjs[j].value="没怀孕";
+            }
+            this.value="怀孕了";//这儿用btnObjs[i]会报错，因为for实在页面加载的时候执行的，
+            //所以到事件被点击执行时这儿是6，没有这个就会报错。所以这儿必须用this
+        };
+    }
+</script>
+</body>
+</html>

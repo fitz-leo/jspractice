@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+        }
+        .cls{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="移出自定义属性" id="btn">
+<div id="dv" score="10" class="cls"></div>
+<script>
+    //点击按钮移出元素的自定义属性
+    my$("btn").onclick=function () {
+        my$("dv").removeAttribute("score");
+        //移出元素的类样式
+        //方法一----------值没有了，但是属性还是有的
+        // my$("dv").className="";
+        //方法二-------也可以移出元素的自带属性
+        my$("dv").removeAttribute("class");
+    };
+</script>
+</body>
+</html>

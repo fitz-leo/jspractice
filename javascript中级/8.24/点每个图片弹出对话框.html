@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <img src="../images/libai.jpg" alt="" id="im1">
+    <img src="../images/222.jpg" alt="" id="im2">
+    <img src="../images/3.jpg" alt="" id="im3">
+<script>
+    var imgObj=document.getElementsByTagName("img");
+    for (var i=0;i<imgObj.length;i++){
+        imgObj[i].onclick=function () {
+            alert("我被点击了");
+        };
+    }
+</script>
+</body>
+</html>

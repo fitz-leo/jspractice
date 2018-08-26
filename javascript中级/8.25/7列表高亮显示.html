@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{
+            list-style: none;
+            cursor: pointer;
+        }
+    </style>
+    <script src="../common.js"></script>
+</head>
+<body>
+<ul id="uu">
+    <li>金士百</li>
+    <li>雪花</li>
+    <li>百威</li>
+    <li>燕京</li>
+    <li>青岛</li>
+    <li>崂山</li>
+    <li>珠江</li>
+    <li>华丹</li>
+</ul>
+<script>
+    var list =document.getElementsByTagName("li");
+    for (var i=0;i<list.length;i++){
+        list[i].onmouseover=function () {
+          this.style.backgroundColor="yellow";
+        };
+        list[i].onmouseout=function () {
+          this.style.backgroundColor="";
+        };
+    }
+</script>
+</body>
+</html>

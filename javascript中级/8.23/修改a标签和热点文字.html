@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+<a id="link" href="https://www.baidu.com/">百度</a>
+<script>
+    document.getElementById("btn").onclick = function () {
+        var aObj=document.getElementById("link");
+        aObj.innerText = "垃圾度";
+        aObj.href="https://www.360.com";
+    }
+</script>
+</body>
+</html>

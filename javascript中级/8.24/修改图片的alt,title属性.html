@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn" />
+<img src="../images/boduo.jpg" alt="哈哈哈" title="嘎嘎嘎" />
+<script>
+    document.getElementById("btn").onclick=function () {
+        var iObj=document.getElementsByTagName("img");
+        iObj[0].alt="haha";
+        iObj[1].title="哈哈哈";
+    };
+</script>
+</body>
+</html>
