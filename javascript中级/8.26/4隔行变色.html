@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+</head>
+<body>
+<input type="button" value="变色" id="btn">
+<ul id="uu">
+    <li>爆炒助教</li>
+    <li>油炸班主任</li>
+    <li>清蒸小苏</li>
+    <li>红烧班长</li>
+    <li>红烧肉</li>
+    <li>糖醋排骨</li>
+    <li>凉拌秋葵</li>
+    <li>鱼香胡萝卜丝</li>
+</ul>
+<script>
+    //隔行变色
+    my$("btn").onclick = function () {
+        var nodes = my$("uu").childNodes;
+        var count = 0;
+        for (var i = 0; i < nodes.length; i++) {
+            if (nodes[i].nodeType == 1 && nodes[i].nodeName == "LI") {
+                nodes[i].style.backgroundColor = count % 2 == 0 ? "red" : "yellow";
+                count++;
+            }
+        }
+    };
+</script>
+</body>
+</html>
