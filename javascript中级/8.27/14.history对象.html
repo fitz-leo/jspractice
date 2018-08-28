@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+</head>
+<body>
+<input type="button" value="跳过去" id="btn1">
+<input type="button" value="前进" id="btn2">
+<script>
+    my$("btn1").onclick=function () {
+        window.location.href="15test.html";
+    };
+    my$("btn2").onclick=function () {
+        window.history.forward();
+    };
+</script>
+</body>
+</html>

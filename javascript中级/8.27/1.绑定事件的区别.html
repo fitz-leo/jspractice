@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+</head>
+<body>
+<input type="button" value="按钮" id="btn">
+<script>
+    my$("btn").addEventListener("click",function () {
+        console.log("hahaha");
+    },false);
+    my$("btn").attachEvent("onclick",function () {
+        console.log("hahahha");
+    });
+</script>
+</body>
+</html>

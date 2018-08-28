@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+</head>
+<body>
+<input type="button" value="按钮" id="btn">
+<input type="button" value="解绑事件" id="btn2">
+<script>
+    //第二种解绑事件的方式
+    /* my$("btn").addEventListener("click",function () {
+         console.log("first");
+     },false);
+     my$("btn").addEventListener("click",function () {
+         console.log("next");
+     },false);*/
+    function f1() {
+        console.log("first");
+    }
+
+    function f2() {
+        console.log("next");
+    }
+
+    my$("btn").addEventListener("click", f1, false);
+    my$("btn").addEventListener("click", f2, false);
+    //点击第二个按钮把第一按钮的第一个点击事件解绑
+    my$("btn2").onclick=function () {
+      my$("btn").removeEventListener("click",f1,false);
+    };
+</script>
+</body>
+</html>

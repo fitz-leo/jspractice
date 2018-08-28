@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+    <style>
+        #dv1 {
+            width: 300px;
+            height: 200px;
+            background-color: red;
+        }
+
+        #dv2 {
+            width: 250px;
+            height: 150px;
+            background-color: green;
+        }
+
+        #dv3 {
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+//事件冒泡：多个元素嵌套，并有层次关系,这些元素都注册了相同的事件，如果里边的元素
+//触发了，那么外边的事件自动触发
+
+<div id="dv1">
+    <div id="dv2">
+        <div id="dv3"></div>
+    </div>
+</div>
+<script>
+    my$("dv1").onclick = function () {
+        console.log(this.id);
+    };
+    my$("dv2").onclick = function (e) {
+        console.log(this.id);
+        window.event.cancelBubble=true;
+        e.stopPropagation();
+    };
+    my$("dv3").onclick = function () {
+        console.log(this.id);
+    };
+    /*document.body.onclick=function () {
+        console.log("lalla");
+    };*/
+</script>
+</body>
+</html>

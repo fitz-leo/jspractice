@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+</head>
+<body>
+<input type="button" value="按钮" id="btn">
+<input type="button" value="解绑事件" id="btn2">
+<script>
+    //第一种解绑事件的方式
+    my$("btn").onclick=function () {
+        console.log("hahah");
+    };
+    my$("btn2").onclick=function () {
+      my$("btn").onclick=null;
+    };
+</script>
+</body>
+</html>
