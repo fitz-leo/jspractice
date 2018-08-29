@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 150px;
+            background-color: hotpink;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="变宽" id="btn">
+<div id="dv"></div>
+<script>
+    my$("btn").onclick=function () {
+      var width=200;
+      var timeId=setInterval(function () {
+          width++;
+          if (width==1000){
+              clearInterval(timeId);
+          }
+          my$("dv").style.width=width+"px";
+      },1);
+    };
+</script>
+</body>
+</html>

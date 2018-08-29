@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+<div id="dv"></div>
+<input type="button" value="渐变" id="btn"/>
+<script>
+    //按钮的点击事件
+    var opacity = 10;
+    var timeId = setInterval(function () {
+        //透明化
+        opacity--;
+        if (opacity <= 0) {
+            clearInterval(timeId);
+        }
+        //设置div的透明度
+        my$("dv").style.opacity = opacity / 10;
+    }, 200);
+</script>
+</body>
+</html>
