@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+</head>
+<body>
+<script>
+    function Person(name, age) {
+        this.name=name;
+        this.age=age;
+    }
+    Person.prototype.eat=function () {
+        console.log("吃凉菜");
+    };
+    var p1=new Person("小红",20);
+    var p2=new Person("小明",30);
+    console.log(p1.eat==p2.eat);
+</script>
+</body>
+</html>

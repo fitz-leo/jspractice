@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function ShowRandom() {
+        this.number=parseInt(Math.random()*10+1);
+    }
+    ShowRandom.prototype.show1=function () {
+        window.setInterval(this.show2.bind(this),1000);
+    };
+    ShowRandom.prototype.show2=function () {
+        console.log(this.number);
+    };
+    var sr=new ShowRandom();
+    sr.show1();
+</script>
+</body>
+</html>

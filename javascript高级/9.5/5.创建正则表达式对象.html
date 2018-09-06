@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var reg=new RegExp(/\d{5}/);
+    var str="hahaha10086";
+    var flag=reg.test(str);
+    console.log(flag);
+
+
+    //字面量的方法创建正则表达式
+    var reg=/\d{1,5}/;
+    var flag=reg.test("lallala3333");
+    console.log(flag);
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(name, age) {
+        this.name=name;
+        this.age=age;
+    }
+    //添加共享的方法
+    Person.prototype.sayHi=function () {
+        console.log("123");
+    };
+
+    //实例化对象,并初始化
+
+    //如果想要使用一些属性和方法,并且属性的值在每个对象中都是一样的,
+    // 方法在每个对象中的操作也都是一样,那么,为了共享数据,节省内存空间,是可以把属性和方法通过原型的方式进行赋值
+    for (var i=0;i<100;i++){
+        var per=new Person("小明",20);
+    }
+</script>
+</body>
+</html>

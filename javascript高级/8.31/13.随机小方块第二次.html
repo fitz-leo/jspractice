@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../common.js"></script>
+    <style>
+        .map{
+            width: 800px;
+            height: 600px;
+            background-color: #ccc;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="map"></div>
+<script>
+    //产生随机数对象
+    (function (window) {
+        //构造函数
+        function Random() {
+        }
+        //为构造函数添加原型对象
+        Random.prototype.getRandom=function (min, max) {
+            return Math.floor(Math.random()*(max-min)+min);
+        };
+        //把局部对象爆露给window顶级对象，就成了全局的对象
+        window.Random=new Random();
+    })(window);
+    //产生小方块对象
+    (function (window) {
+        //选择器的方式来获取元素对象
+        var map=document.querySelector(".map");
+        //食物的构造函数
+        function Food(width, height, color) {
+            this.width=width||20;
+            this.height=height||20;
+            //横纵坐标
+            this.x=0;
+            this.y=0;
+            this.color=color;
+            this.element=document.createElement("div");
+        }
+        //初始化小方块的消失的效果及位置
+        Food.prototype.init=function (map) {
+            //设置小方块的的样式
+            var div=this.element;
+            div.style.position="absolute";
+            div.style.width=this.width+"px";
+            div.style.height=this.height+"px";
+            div.style.backgroundColor=this.color;
+            //把小方块加到map地图中
+            map.appendChild(div);
+            this.render(map);
+        };
+        //产生随机位置
+        Food.prototype.render=function (map) {
+            //随机产生横纵坐标
+            var x=Random.getRandom(0,map.offsetWidth/this.width)*this.width;
+            var y=Random.getRandom(0,map.offsetHeight/this.height)*this.height;
+            this.x=x;
+            this.y=y;
+            var div=this.element;
+            div.style.left=x+"px";
+            div.style.top=y+"px";
+
+        };
+
+        //实例化对象
+        var fd=new Food(20,20,"pink");
+        fd.init(map);
+        console.log(fd.x+"==="+fd.y);
+    })(window);
+</script>
+</body>
+</html>

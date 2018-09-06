@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*function Person(age) {
+        this.age=age;
+    }
+    Person.prototype.eat=function () {
+      console.log("人吃东西");
+    };
+    function Student (sex) {
+        this.sex=sex;
+    };
+    Student.prototype=new Person(10);
+    Student.prototype.sayHi=function () {
+        console.log("学生");
+    };
+    //改变了原型对象的指向
+
+        var stu=new Student("男");
+        stu.eat();*/
+    function Person(age) {
+        this.age=age;
+    }
+    Person.prototype={
+      eat:function () {
+          console.log("吃");
+      }
+    };
+    Person.prototype.sayHi=function () {
+        console.log("nihao");
+    };
+    var per=new Person(10);
+    per.sayHi();
+</script>
+</body>
+</html>

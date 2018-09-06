@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="按钮" id="btn">
+<script>
+    (function () {
+        document.getElementById("btn").onclick=function () {
+            console.log("dianjil");
+        };
+    }());
+
+/*
+    (function () {
+        var str="小白喜欢小黑";
+        str=str.substr(2);
+        console.log(str);
+    }());
+
+
+    //沙箱
+    (function () {
+      var str="aaaaaaaaaaa";
+      str=str.substr(4);
+      console.log(str);
+    }());*/
+</script>
+</body>
+</html>

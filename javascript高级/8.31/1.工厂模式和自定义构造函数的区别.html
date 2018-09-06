@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //自定义构造函数创建对象
+    function Person(name, age) {
+        this.name=name;
+        this.age=age;
+        this.sayHi=function () {
+            console.log("haha");
+        };
+    }
+    //创建对象===实例化对象的同时对属性进行初始化
+    var per=new Person("小红",20);
+    alert(per.name);
+    alert(per.age);
+
+
+
+    //工厂模式创建对象
+    function createObject(name, age) {
+        var obj={};
+        obj.name=name;
+        obj.age=age;
+        obj.sayHi=function () {
+          console.log("hahah");
+        };
+        return obj;
+    }
+    var per1=createObject("兄啊",20);
+    alert(per1.name);
+    alert(per1.age);
+</script>
+</body>
+</html>

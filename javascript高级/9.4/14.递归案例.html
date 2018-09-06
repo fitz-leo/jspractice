@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //求n个数字的和
+    function getSum(x) {
+        if (x == 1) {
+            return 1;
+        }
+        return x+getSum(x-1);
+    }
+    console.log(getSum(100));
+
+    //求一个数字各个位数上的数字的和
+    function getEverySum(x) {
+        if (x < 10) {
+            return x;
+        }
+        return x%10+getEverySum(parseInt(x/10));
+    }
+    console.log(getEverySum(1242));
+
+    //求斐波那契数列
+    function getFib(x) {
+        if (x == 1 || x == 2){
+            return 1;
+        }
+        return getFib(x-1)+getFib(x-2);
+    }
+    console.log(getFib(12));
+</script>
+</body>
+</html>

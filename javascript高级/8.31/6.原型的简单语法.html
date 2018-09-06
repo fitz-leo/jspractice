@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Student(name, age, sex) {
+        this.name=name;
+        this.age=age;
+        this.sex=sex;
+    }
+    //简单原型的写法
+    Student.prototype={
+        //手动修改构造器的指向
+        constructor:Student,
+        height:"188",
+        weight:"55kg",
+        study:function () {
+            console.log("haa");
+        },
+        eat:function () {
+            console.log("woyaochi");
+        }
+    };
+    var stu=new Student("段飞",20,"男");
+    stu.eat();
+    stu.study();
+    console.dir(Student);
+    console.dir(stu);
+</script>
+</body>
+</html>

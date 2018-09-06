@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str="中国移动:10086,中国联通:10010,中国电信:10000";
+    //把里边所有的数字全部显示出来
+    var array=str.match(/\d{5}/g);
+    console.log(array);
+
+    //把全部邮箱提取出来
+    var str1 = "123123@xx.com,fangfang@valuedopinions.cn 286669312@qq.com 2、emailenglish@emailenglish.englishtown.com 286669312@qq.com...";
+    var array1 = str1.match(/\w+@\w+\.\w+(\.\w+)?/g);
+    console.log(array1);
+
+    //提取日
+    var str2="2017-11-12";
+    var array2=str2.match(/(\d{4})[-](\d{2})[-](\d{2})/g);
+    console.log(RegExp.$3);
+
+    //分段获取邮箱信息
+    var email="shuaiyangtaishuaile@itcast.com.cn";
+    email.match(/([0-9a-zA-Z_.-]+)[@]([0-9a-zA-Z_-]+)(([.][a-zA-Z]+){1,2})/);
+    console.log(RegExp.$1);//用户名
+    console.log(RegExp.$2);
+    console.log(RegExp.$3);//域名
+
+    console.log("====================");
+
+    //替换中文字
+    var str3="啦啦啦啦啦，我是最帅的，我是最最帅的";
+    str3=str3.replace(/帅/g,"猥琐");
+    console.log(str3);
+
+    console.log("====================");
+
+    //删除空元素
+    var str4="     哈哈哈    ，太开心了";
+    str4=str4.replace(/\s+/g,"");
+    console.log(str4);
+
+    console.log("====================");
+
+    //所有的h都替换成S
+    var str5="HhpphH";//SSppSS
+    str5=str5.replace(/[h]/gi,"S");
+    console.log(str5);
+
+    console.log("====================");
+
+    var str6 = "中国移动:10086,中国联通:10010,中国电信:10000";
+    //    //把里面所有的数字全部显示出来
+    //    //var array = str.match(/\d{5}/g);
+    //    //正则表达式对象.exec方法传入字符串
+    var reg1=/\d{5}/g;
+    var result=reg1.exec(str6);
+    while (result!=null){
+        console.log(result[0]);
+        result=reg1.exec(str6);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function f1() {
+        var num=10;
+        function f2() {
+            console.log(num);
+        }
+        f2();
+    }
+    f1();
+
+
+    //对象模式的闭包：函数中有一个对象
+    function f3() {
+        var num=10;
+        var obj={
+            age:num
+        };
+        console.log(obj.age);
+    }
+    f3();
+
+    function f4() {
+        var num=10;
+        return function () {
+            num++;
+            return num;
+        }
+    }
+    var ff=f4();
+    console.log(ff());
+    console.log(ff());
+    console.log(ff());
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    String.prototype.myReverse = function () {
+        for (var i = this.length - 1; i >= 0; i--) {
+            console.log(this[i]);
+        }
+    };
+    var str = "abcdefg";
+    str.myReverse();
+
+    //为Array内置对象的原型对象中添加方法
+    Array.prototype.mySort = function () {
+        for (var i = 0; i < this.length - 1; i++) {
+            for (var j = 0; j < this.length - 1 - i; j++) {
+                if (this[j] < this[j + 1]) {
+                    var temp = this[j];
+                    this[j] = this[j + 1];
+                    this[j + 1] = temp;
+                }//end if
+            }// end for
+        }//end for
+    };
+    var arr=[100,31,141,334,33];
+    arr.mySort();
+    console.log(arr);
+
+    String.prototype.shaHi=function () {
+        console.log(this+"hahahha");
+    };
+    var str2="我";
+    str2.shaHi();
+
+</script>
+</body>
+</html>

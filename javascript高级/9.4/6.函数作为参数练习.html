@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [1, 100, 20, 200, 40, 50, 120, 10];
+    //排序---函数作为参数使用,匿名函数作为sort方法的参数使用,那么此时的匿名函数中有两个参数,
+    arr.sort(function (a, b) {
+        if (a > b) {
+            return -1;
+        }else if (a == b) {
+            return 0;
+        }else {
+            return 1;
+        }
+    });
+    console.log(arr);
+
+    var arr1=["acdef","abcd","bcedf","bced"];
+    arr.sort(function (c,d) {
+        if (c > d) {
+            return 1;
+        }else  if (c == d)  {
+            return 0;
+        }else {
+            return -1;
+        }
+    });
+    console.log(arr1);
+</script>
+</body>
+</html>
